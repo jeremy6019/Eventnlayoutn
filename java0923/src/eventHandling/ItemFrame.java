@@ -70,7 +70,7 @@ public class ItemFrame extends Frame {
            //List에서 항목을 선택했을 때 호출되는 메소드 
 			@Override
 			public void itemStateChanged(ItemEvent e) {
-				//선택한 항목 출력  - 선택이 해제된 아이템과 선택괸 아이템의 
+				//선택한 항목 출력  - 선택이 해제된 아이템과 선택된 아이템의 
 				//인덱스가 리턴됩니다.
 				//System.out.printf("%s\n", e.getItem());
 				//선택이 변경된 내용 
