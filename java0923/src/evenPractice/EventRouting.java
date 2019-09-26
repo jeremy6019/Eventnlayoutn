@@ -1,13 +1,13 @@
 package evenPractice;
 
 import java.awt.Button;
+import java.awt.FlowLayout;
 import java.awt.Frame;
-
-import eventHandling.EventHandler;
-// 내일 강사님꼐 질문 
+// 내일 강사님 질문 
 public class EventRouting extends Frame {
 
    Button blueBtn, greenBtn;
+   
 /*	
 	class EventRoutingHandler implements ActionListener {
 
@@ -25,16 +25,18 @@ public class EventRouting extends Frame {
 	}
 */
 	
+	
+
 	public EventRouting() {
 		
-		blueBtn = new Button("파랑");
+		blueBtn= new Button("파랑");
 		greenBtn = new Button("녹색");
 		
-		 EventHandler eventHandler = new EventHandler(); 
+		 EventRoutingHandler eventHandler = new EventRoutingHandler(blueBtn, greenBtn); 
 		 eventHandler.setFrame(this);
 		 blueBtn.addActionListener(eventHandler);
 		 greenBtn.addActionListener(eventHandler); 
-		 
+		 setLayout(new FlowLayout());
 		add(blueBtn);
 		add(greenBtn);
 //		blueBtn.addActionListener(new EventRoutingHandler());
